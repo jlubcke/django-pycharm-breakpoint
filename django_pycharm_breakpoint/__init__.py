@@ -1,0 +1,1 @@
+default_app_config = 'django_pycharm_breakpoint.django_app.DjangoPycharmBreakpointConfig'
