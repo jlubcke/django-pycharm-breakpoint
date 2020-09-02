@@ -22,6 +22,20 @@ class DjangoPycharmBreakpointConfig(AppConfig):
 
         exception.response_for_exception = monkey_patched_response_for_exception
 
+        try:
+            import rest_framework
+            from rest_framework.views import APIView
+        except ImportError:
+            pass
+        else:
+            APIView.original_handle_exception = APIView.handle_exception
+
+            def monkey_patched_handle_exception(self, exc):
+                breakpoint_on_exception()
+                return self.original_handle_exception(exc)
+
+            APIView.handle_exception = monkey_patched_handle_exception
+
 
 def breakpoint_on_exception():
     try:
