@@ -11,7 +11,7 @@ requirements = [
 
 setup(
     name='django-pycharm-breakpoint',
-    version='0.1.0',
+    version='0.2.0',
     description='App for Django to during development enter PyCharm debugger on uncaught exceptions',
     long_description=readme + '\n',
     author='Johan Lübcke',
