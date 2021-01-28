@@ -25,7 +25,7 @@ You can install the plugin by running
 
 In ``settings.py`` add  ``django-pycharm-breakpoint`` to your ``INSTALLED_APPS``
 
-    INTALLED_APPS += ['django_pycharm_breakpoint']
+    INSTALLED_APPS += ['django_pycharm_breakpoint']
 
 
 Usage
